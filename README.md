@@ -43,7 +43,7 @@ npm install \
 2. Register that Router with the schedulerDiscoveryTag
 
     ```TypeScript
-    import {MySchedulerController} from './my_scheduler_controller');
+    import {MySchedulerController} from './my_scheduler_controller';
     import {schedulerDiscoveryTag} from '@essential-projects/scheduler_contracts';
 
     iocContainer.register('MySchedulerController', MySchedulerController)
