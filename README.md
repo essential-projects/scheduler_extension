@@ -1,10 +1,10 @@
 # Scheduler Extension
 
-This is an extension for the [@essential-projects/bootstrapper](essential-projects/bootstrapper).
+This is an extension for the [@essential-projects/bootstrapper](https://github.com/essential-projects/bootstrapper).
 
 ## What are the goals of this project?
 
-The goal is to provide applications that utilize the [@essential-projects/bootstrapper](essential-projects/bootstrapper).
+The goal is to provide applications that utilize the [@essential-projects/bootstrapper](https://github.com/essential-projects/bootstrapper).
 a way to execute functions based on a schedule.
 
 ### Requirements
