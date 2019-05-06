@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# lock-files
+package-lock.json
+yarn.lock
+
+# build directories
+dist
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# OSX-finder info-files
+*.DS_Store
+
+# IDE configs
+.vscode
+.idea/
+*.iml
+*.iws
+.classpath
+.project
+.settings/
