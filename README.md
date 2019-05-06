@@ -40,7 +40,7 @@ npm install \
     }
     ```
 
-2. Register that Router with the schedulerDiscoveryTag
+2. Register that Controller with the schedulerDiscoveryTag
 
     ```TypeScript
     import {MySchedulerController} from './my_scheduler_controller';
