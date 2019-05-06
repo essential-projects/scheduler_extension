@@ -33,7 +33,7 @@ npm install \
       }
 
       private registerJobs(): void {
-        this.schedule.registerJob('*/5 * * * * *', (): void => {
+        this.registerJob('*/5 * * * * *', (): void => {
           console.log("I'm scheduled to run every 5 seconds!");
         });
       }
