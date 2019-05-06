@@ -32,24 +32,9 @@ export class SchedulerExtension implements ISchedulerExtension {
 
   protected async initializeSchedulers(): Promise<void> {
 
-    let schedulerNames: Array<string>;
-
-    const allSchedulerNames: Array<string> = this.container.getKeysByTags(schedulerDiscoveryTag);
+    const schedulerNames: Array<string> = this.container.getKeysByTags(schedulerDiscoveryTag);
 
     this.container.validateDependencies();
-
-    const filteredSchedulerNames: Array<string> = await this.filterSchedulers(allSchedulerNames);
-
-    if (typeof filteredSchedulerNames === 'undefined' || filteredSchedulerNames === null) {
-      schedulerNames = allSchedulerNames;
-    } else {
-
-      if (!Array.isArray(filteredSchedulerNames)) {
-        throw new Error('Filtered scheduler names must be of type Array.');
-      }
-
-      schedulerNames = filteredSchedulerNames;
-    }
 
     for (const schedulerName of schedulerNames) {
       await this.initializeScheduler(schedulerName);
@@ -72,10 +57,6 @@ export class SchedulerExtension implements ISchedulerExtension {
 
     const schedulerInstance = await this.container.resolveAsync<ISchedulerController>(schedulerName);
     this.schedulers[schedulerName] = schedulerInstance;
-  }
-
-  protected filterSchedulers(schedulerNames: Array<string>): Promise<Array<string>> | Array<string> {
-    return schedulerNames;
   }
 
 }
