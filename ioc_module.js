@@ -1,5 +1,4 @@
 
-
 const SchedulerExtension = require('./dist/commonjs/index').SchedulerExtension;
 const extensionDiscoveryTag = require('@essential-projects/bootstrapper_contracts').extensionDiscoveryTag;
 
