@@ -1,6 +1,0 @@
-{
-  "extends": "5minds-typescript/fast",
-  "rules": {
-    "@typescript-eslint/no-explicit-any": ["warning"]
-  }
-}
