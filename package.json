@@ -12,8 +12,8 @@
     "Heiko Mathes <heiko.mathes@5minds.de>"
   ],
   "dependencies": {
-    "@essential-projects/bootstrapper_contracts": "~1.3.0",
-    "@essential-projects/scheduler_contracts": "~1.0.0",
+    "@essential-projects/bootstrapper_contracts": "feature~change_to_eslint_and_tsc",
+    "@essential-projects/scheduler_contracts": "feature~change_to_eslint_and_tsc",
     "addict-ioc": "~2.5.1",
     "cron": "^1.7.1",
     "loggerhythm": "~3.0.3"
