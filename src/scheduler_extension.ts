@@ -32,7 +32,7 @@ export class SchedulerExtension implements ISchedulerExtension {
 
   protected async initializeSchedulers(): Promise<void> {
 
-    const schedulerNames: Array<string> = this.container.getKeysByTags(schedulerDiscoveryTag);
+    const schedulerNames = this.container.getKeysByTags(schedulerDiscoveryTag);
 
     this.container.validateDependencies();
 
@@ -40,17 +40,16 @@ export class SchedulerExtension implements ISchedulerExtension {
       await this.initializeScheduler(schedulerName);
     }
 
-    const jobLists = Object.values<ISchedulerController>(this.schedulers)
-      .map((scheduler: ISchedulerController): Array<CronJob> => {
-        return scheduler.jobs;
-      });
+    const jobLists = Object
+      .values<ISchedulerController>(this.schedulers)
+      .map((scheduler: ISchedulerController): Array<CronJob> => scheduler.jobs);
 
     this.jobs = [].concat(...jobLists);
   }
 
   protected async initializeScheduler(schedulerName: string): Promise<void> {
 
-    const schedulerIsNotRegistered: boolean = !this.container.isRegistered(schedulerName);
+    const schedulerIsNotRegistered = !this.container.isRegistered(schedulerName);
     if (schedulerIsNotRegistered) {
       throw new Error(`There is no scheduler registered for key '${schedulerName}'`);
     }
