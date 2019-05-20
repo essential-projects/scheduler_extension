@@ -8,7 +8,9 @@
   "license": "MIT",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
+  "author": "5Minds IT-Solutions GmbH & Co. KG",
   "contributors": [
+    "Christian Werner <christian.werner@5minds.de>",
     "Heiko Mathes <heiko.mathes@5minds.de>"
   ],
   "dependencies": {
